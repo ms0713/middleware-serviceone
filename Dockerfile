@@ -1,5 +1,5 @@
 # Use official OpenJDK image
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:21-jdk
 
 # Copy the built JAR file into the container
 COPY target/middleware-serviceone-*.jar middlewaresone.jar
