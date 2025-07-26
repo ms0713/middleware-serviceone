@@ -23,6 +23,9 @@ jobs:
         java-version: '21'
         distribution: 'temurin' 
 
+    - name: Build with Maven
+      run: mvn clean package --file pom.xml
+
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
