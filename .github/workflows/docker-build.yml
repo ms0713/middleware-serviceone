@@ -31,7 +31,8 @@ jobs:
         docker run -d -p 9090:9090 --name test-app java-middleware
         sleep 10
 
-    - name: Show logs (to debug exit/crash)
+    - name: Show container logs (to debug if it crashes)
+      run: docker logs test-app
     
     - name: Test endpoint inside container
       run: docker exec test-app curl -f http://localhost:9090/hello
