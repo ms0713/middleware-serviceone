@@ -7,7 +7,7 @@ on:
 env:
   AWS_REGION: us-east-1
   IMAGE_NAME: middleware-service
-  PUBLIC_ECR_URI: public.ecr.aws/<your-alias>/middleware-service
+  PUBLIC_ECR_URI: public.ecr.aws/m1u8i8e9/middleware-service/middleware-serviceone
 
 jobs:
   push-to-ecr:
