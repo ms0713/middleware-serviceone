@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: middleware-serviceone
+  labels:
+    app: middleware-serviceone
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: middleware-serviceone
+  template:
+    metadata:
+      labels:
+        app: middleware-serviceone
+    spec:
+      containers:
+        - name: middleware
+          image: public.ecr.aws/m1u8i8e9/middleware-service/middleware-serviceone:latest
+          ports:
+            - containerPort: 9090

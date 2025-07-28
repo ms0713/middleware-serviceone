@@ -49,3 +49,9 @@ jobs:
         kubectl apply -f k8s/deployment.yaml
         kubectl apply -f k8s/service.yaml
         kubectl apply -f k8s/ingress.yaml
+        
+    - name: Get Ingress and Services Info   # 👈 ADD THIS HERE
+      run: |
+        kubectl get ingress
+        kubectl get svc -n ingress-nginx
+        kubectl get pods -n ingress-nginx
