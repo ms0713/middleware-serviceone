@@ -35,7 +35,7 @@ jobs:
 
     - name: Apply aws-auth ConfigMap (node access)
       run: |
-        kubectl apply -f k8s/aws-auth.yml
+        kubectl apply --validate=false -f k8s/aws-auth.yml
 
     - name: Verify cluster connection
       run: kubectl get nodes
